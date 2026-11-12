@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Новогодний сезон — фотостудии «Белая» и «Берлога», Оренбург</title>
+<meta name="description" content="Новогодние фотосессии в студиях «Белая» и «Берлога» в центре Оренбурга. Залы, пакеты, подарочные сертификаты.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f1b17'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%23d7b46a' stroke-width='2.4'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23d7b46a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#fbf8f3;
+    --cream:#f5eee3;
+    --sand:#ece1cf;
+    --paper:#fffdf9;
+    --ink:#1f1b17;
+    --ink-2:#3a332c;
+    --muted:#7a6f63;
+    --line:#e7dccb;
+    --gold:#b8914f;
+    --gold-2:#d7b46a;
+    --gold-soft:#efdcb2;
+    --night:#1b1714;
+    --radius:20px;
+    --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans:"Manrope", -apple-system, "Segoe UI", Roboto, sans-serif;
+    --shadow:0 24px 60px -28px rgba(60,40,15,.28);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--ivory);color:var(--ink);font:300 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  section{position:relative;padding:96px 0;overflow:hidden}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;margin:0;letter-spacing:-.005em}
+  h2{font-size:clamp(36px,5.4vw,58px);margin-bottom:16px}
+  h2 em,h1 em{font-style:italic;font-weight:300;color:var(--gold)}
+  h3{font-size:clamp(28px,3.2vw,36px)}
+  p{margin:0 0 14px}
+  .lead{color:var(--muted);max-width:600px;font-size:17px;margin:0 0 44px}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:18px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
+  .center{text-align:center}
+  .center .lead{margin-left:auto;margin-right:auto}
+  .center .eyebrow::after{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
+  .note{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);border:1px dashed rgba(184,145,79,.55);border-radius:999px;padding:6px 14px;background:rgba(255,253,249,.7)}
+  .note::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 10px var(--gold-2)}
+
+  /* кнопки */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;text-decoration:none;
+    font:500 15px/1 var(--sans);letter-spacing:.03em;padding:18px 30px;border-radius:999px;transition:background .25s,color .25s,transform .2s,box-shadow .25s;white-space:nowrap}
+  .btn:active{transform:scale(.98)}
+  .btn-gold{background:linear-gradient(135deg,#c9a35d,#b18a47);color:#fff;box-shadow:0 10px 30px -12px rgba(177,138,71,.8)}
+  .btn-gold:hover{box-shadow:0 14px 36px -10px rgba(177,138,71,.95);background:linear-gradient(135deg,#d2ad67,#b8914f)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:#3a322a}
+  .btn-line{background:transparent;color:var(--ink);border:1px solid rgba(31,27,23,.35)}
+  .btn-line:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+  .btn-glass{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .btn-glass:hover{background:rgba(255,255,255,.95);color:var(--ink)}
+  .btn-block{width:100%}
+  .btn svg{flex:none}
+
+  /* шапка */
+  .top{position:absolute;inset:0 0 auto 0;z-index:6;padding:22px 0}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none;font-family:var(--serif);font-size:22px;letter-spacing:.14em;text-transform:uppercase}
+  .brand i{font-style:normal;width:1px;height:22px;background:rgba(239,220,178,.7)}
+  .top nav{display:flex;gap:28px}
+  .top nav a{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+  .top nav a:hover{color:var(--gold-soft)}
+
+  /* первый экран */
+  .hero{min-height:100svh;display:flex;align-items:flex-end;padding:0;color:#fff;background:var(--night)}
+  .hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;transform:scale(1.04);animation:heroZoom 18s ease-out forwards}
+  @keyframes heroZoom{to{transform:scale(1)}}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:
+     radial-gradient(60% 50% at 78% 30%,rgba(255,196,110,.28),transparent 70%),
+     linear-gradient(180deg,rgba(20,15,10,.55) 0%,rgba(20,15,10,.12) 35%,rgba(20,15,10,.35) 60%,rgba(18,13,9,.9) 100%)}
+  .bokeh{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+  .bokeh span{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,214,140,.55),rgba(255,214,140,0) 70%);filter:blur(2px);animation:float 14s ease-in-out infinite alternate}
+  @keyframes float{to{transform:translate3d(0,-26px,0) scale(1.08);opacity:.7}}
+  #snow{position:absolute;inset:0;z-index:3;pointer-events:none;width:100%;height:100%}
+  .hero .wrap{position:relative;z-index:4;padding-top:140px;padding-bottom:84px;width:100%}
+  .hero .eyebrow{color:var(--gold-soft)}
+  .hero h1{font-size:clamp(48px,8.4vw,108px);font-weight:300;max-width:900px;margin-bottom:26px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+  .hero h1 em{color:var(--gold-soft)}
+  .hero .sub{font-size:clamp(18px,2.1vw,22px);max-width:560px;margin:0 0 10px;font-weight:300;opacity:.95}
+  .hero .hint{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--gold-soft);margin:6px 0 36px;letter-spacing:.02em}
+  .hero .hint::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 0 4px rgba(215,180,106,.22),0 0 16px var(--gold-2)}
+  .btns{display:flex;flex-wrap:wrap;gap:14px}
+  .scroll-cue{position:absolute;z-index:4;left:50%;bottom:22px;transform:translateX(-50%);width:1px;height:46px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.7));}
+
+  /* студии */
+  .studios{background:
+     radial-gradient(40% 50% at 10% 0%,rgba(239,220,178,.55),transparent 70%),
+     radial-gradient(35% 45% at 100% 100%,rgba(236,225,207,.9),transparent 70%),
+     var(--ivory)}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .studio{display:flex;flex-direction:column;background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(231,220,203,.8)}
+  .studio figure{position:relative;margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+  .studio figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+  .studio:hover figure img{transform:scale(1.04)}
+  .studio figure figcaption{position:absolute;left:20px;bottom:18px;color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .studio figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,14,8,.55))}
+  .studio figure figcaption{z-index:1}
+  .studio .in{padding:34px 36px 36px;display:flex;flex-direction:column;flex:1}
+  .studio h3{font-size:clamp(40px,4.4vw,52px);font-weight:300;margin-bottom:6px}
+  .studio .tag{color:var(--muted);font-size:15px;margin-bottom:22px}
+  .facts{list-style:none;margin:0 0 24px;padding:0}
+  .facts li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+  .facts li:last-child{border-bottom:1px solid var(--line)}
+  .facts svg{flex:none;margin-top:3px;color:var(--gold)}
+  .halls{display:grid;grid-template-columns:1fr auto;gap:6px 16px;font-size:14.5px;margin:2px 0 0}
+  .halls dt{color:var(--ink-2)}
+  .halls dd{margin:0;text-align:right;font-weight:500;white-space:nowrap}
+  .price-row{display:flex;align-items:baseline;gap:10px;margin:4px 0 6px}
+  .price-row .p{font-family:var(--serif);font-size:46px;line-height:1;color:var(--gold)}
+  .price-row .u{color:var(--muted);font-size:14px}
+  .small{font-size:13px;color:var(--muted)}
+  .studio .actions{margin-top:auto;padding-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+  .studio .actions .btn{flex:1 1 200px}
+
+  /* пакеты */
+  .packs-sec{background:
+     linear-gradient(180deg,rgba(251,248,243,0) 0%,rgba(251,248,243,.0) 100%),
+     radial-gradient(50% 60% at 50% 0%,rgba(215,180,106,.18),transparent 70%),
+     linear-gradient(180deg,var(--cream),#f9f3ea)}
+  .packs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+  .packs-head .lead{margin:0}
+  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pack{position:relative;display:flex;flex-direction:column;background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:transform .35s,box-shadow .35s}
+  .pack:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .pack figure{margin:0;aspect-ratio:5/4;overflow:hidden;position:relative}
+  .pack figure img{width:100%;height:100%;object-fit:cover}
+  .pack figure::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 70% 20%,rgba(255,206,120,.28),transparent 70%)}
+  .pack .in{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1}
+  .pack .dur{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .pack h3{font-size:30px;margin-bottom:18px}
+  .pack .p{font-family:var(--serif);font-size:44px;line-height:1;margin-top:auto}
+  .pack .p small{font-family:var(--sans);font-size:14px;color:var(--muted);margin-right:6px}
+  .pack .ex{font-size:12px;color:var(--muted);margin:10px 0 20px;font-style:italic}
+  .base{margin-top:28px;text-align:center;font-size:14px;color:var(--muted)}
+
+  /* залы */
+  .halls-sec{background:
+     radial-gradient(45% 40% at 90% 8%,rgba(239,220,178,.5),transparent 70%),
+     radial-gradient(40% 40% at 0% 60%,rgba(236,225,207,.8),transparent 70%),
+     var(--ivory)}
+  .tabs{display:inline-flex;gap:6px;padding:6px;border-radius:999px;background:var(--paper);border:1px solid var(--line);margin-bottom:34px}
+  .tab{border:0;background:transparent;font:500 14px var(--sans);letter-spacing:.08em;padding:12px 26px;border-radius:999px;cursor:pointer;color:var(--muted);transition:.25s}
+  .tab[aria-selected="true"]{background:var(--ink);color:#fff}
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:14px}
+  .gallery[hidden]{display:none}
+  .g{position:relative;margin:0;border-radius:16px;overflow:hidden;cursor:zoom-in;background:var(--sand)}
+  .g img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+  .g:hover img{transform:scale(1.05)}
+  .g::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(15,10,6,.65))}
+  .g figcaption{position:absolute;z-index:1;left:18px;right:18px;bottom:14px;color:#fff}
+  .g figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1}
+  .g figcaption span{font-size:12.5px;opacity:.85}
+  .w3{grid-column:span 3}.w2{grid-column:span 2}.w4{grid-column:span 4}.h2{grid-row:span 2}.h3{grid-row:span 3}
+
+  /* сертификат */
+  .cert-sec{background:
+     radial-gradient(40% 55% at 85% 30%,rgba(255,200,120,.16),transparent 70%),
+     radial-gradient(30% 40% at 10% 90%,rgba(215,180,106,.12),transparent 70%),
+     linear-gradient(160deg,#211b16,#15110e);color:#f3e9da}
+  .cert-sec .eyebrow{color:var(--gold-soft)}
+  .cert-sec h2 em{color:var(--gold-soft)}
+  .cert-sec .lead{color:rgba(243,233,218,.72)}
+  .cert-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+  .card-visual{position:relative;aspect-ratio:1.6/1;border-radius:18px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);transform:rotate(-2.5deg)}
+  .card-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+  .card-visual::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(18,13,9,.78),rgba(18,13,9,.35) 60%,rgba(18,13,9,.6))}
+  .card-visual .frame{position:absolute;inset:14px;z-index:2;border:1px solid rgba(239,220,178,.55);border-radius:10px}
+  .card-visual .cv{position:absolute;z-index:3;inset:0;padding:clamp(22px,4vw,40px);display:flex;flex-direction:column;justify-content:space-between;color:#fff}
+  .cv .t{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft)}
+  .cv .n{font-family:var(--serif);font-weight:300;font-size:clamp(44px,6vw,72px);line-height:1}
+  .cv .s{font-size:13px;opacity:.8;letter-spacing:.06em}
+  .card-visual.back{position:absolute;inset:auto -6% -10% auto;width:62%;transform:rotate(6deg);opacity:.55;z-index:-1}
+  .cert-visual-wrap{position:relative;isolation:isolate;padding:20px 6% 40px 0}
+  .opt-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 12px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+  .chip{position:relative}
+  .chip input{position:absolute;opacity:0;pointer-events:none}
+  .chip span{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;padding:13px 20px;border-radius:14px;border:1px solid rgba(239,220,178,.3);cursor:pointer;transition:.2s;font-size:15px;color:#f3e9da;background:rgba(255,255,255,.03)}
+  .chip span small{font-size:12px;opacity:.65}
+  .chip span b{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1}
+  .chip input:checked + span{border-color:var(--gold-2);background:rgba(215,180,106,.14);box-shadow:inset 0 0 0 1px var(--gold-2)}
+  .chip input:focus-visible + span{outline:2px solid var(--gold-2);outline-offset:2px}
+  .any{display:flex;align-items:center;gap:10px;border:1px solid rgba(239,220,178,.3);border-radius:14px;padding:6px 8px 6px 18px;margin-bottom:22px;background:rgba(255,255,255,.03)}
+  .any label{font-size:14px;color:rgba(243,233,218,.8);white-space:nowrap}
+  .any input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font:400 24px var(--serif);padding:8px 4px;text-align:right}
+  .any input::placeholder{color:rgba(243,233,218,.35)}
+  .any i{font-style:normal;font-family:var(--serif);font-size:22px;color:var(--gold-soft);padding-right:8px}
+  .cert-list{list-style:none;padding:0;margin:0 0 28px;font-size:14.5px;color:rgba(243,233,218,.86)}
+  .cert-list li{display:flex;gap:12px;align-items:flex-start;padding:7px 0}
+  .cert-list svg{flex:none;margin-top:4px;color:var(--gold-2)}
+  .parents{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--gold-soft);margin:0 0 20px;line-height:1.2}
+  .cert-sec .note{background:rgba(255,255,255,.04);color:rgba(243,233,218,.75);border-color:rgba(239,220,178,.4)}
+
+  /* для компаний */
+  .corp{padding:0;color:#fff;background:#2a211a}
+  .corp > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .corp::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(22,16,11,.9) 0%,rgba(22,16,11,.65) 45%,rgba(22,16,11,.2) 100%)}
+  .corp .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:110px}
+  .corp .eyebrow{color:var(--gold-soft)}
+  .corp h2{max-width:620px}
+  .corp h2 em{color:var(--gold-soft)}
+  .corp p{max-width:520px;color:rgba(255,255,255,.82);font-size:17px}
+  .corp .from{display:flex;align-items:baseline;gap:12px;margin:22px 0 32px}
+  .corp .from b{font-family:var(--serif);font-weight:300;font-size:56px;line-height:1;color:var(--gold-soft)}
+  .corp .from span{opacity:.8}
+
+  /* шаги */
+  .steps-sec{background:
+     radial-gradient(50% 60% at 50% 100%,rgba(239,220,178,.55),transparent 70%),
+     linear-gradient(180deg,var(--ivory),var(--cream))}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s;position:relative}
+  .steps::before{content:"";position:absolute;top:42px;left:16%;right:16%;height:1px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.5}
+  .step{position:relative;text-align:center;padding:0 12px}
+  .step .num{width:84px;height:84px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--gold-soft);font-family:var(--serif);font-size:36px;color:var(--gold);box-shadow:0 0 0 8px rgba(251,248,243,.9),0 0 40px rgba(215,180,106,.35)}
+  .step h3{font-size:28px;margin-bottom:10px}
+  .step p{color:var(--muted);font-size:15px;max-width:300px;margin:0 auto}
+
+  /* форма */
+  .form-sec{background:
+     radial-gradient(40% 50% at 0% 0%,rgba(239,220,178,.55),transparent 70%),
+     radial-gradient(40% 50% at 100% 100%,rgba(215,180,106,.2),transparent 70%),
+     var(--cream)}
+  .form-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  .form-side{position:relative;border-radius:var(--radius);overflow:hidden;min-height:520px;color:#fff;display:flex;align-items:flex-end}
+  .form-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .form-side::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,14,9,.1),rgba(20,14,9,.8))}
+  .form-side .in{position:relative;z-index:2;padding:36px}
+  .form-side h2{color:#fff}
+  .form-side p{color:rgba(255,255,255,.85)}
+  .form-card{background:var(--paper);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .field{display:block;margin-bottom:18px}
+  .field > span{display:block;font-size:13px;font-weight:500;letter-spacing:.04em;margin-bottom:8px;color:var(--ink-2)}
+  .field > span em{font-style:normal;color:var(--muted);font-weight:400}
+  .input{width:100%;font:400 16px var(--sans);color:var(--ink);background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:15px 16px;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none;-webkit-appearance:none}
+  .input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,145,79,.16)}
+  .input.err{border-color:#c0583a;box-shadow:0 0 0 3px rgba(192,88,58,.12)}
+  select.input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23b8914f' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .after{font-size:13.5px;color:var(--muted);text-align:center;margin:14px 0 0}
+  .ok{display:none;text-align:center;padding:30px 10px}
+  .ok .ic{width:70px;height:70px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:rgba(215,180,106,.15);color:var(--gold);box-shadow:0 0 40px rgba(215,180,106,.35)}
+  .ok h3{margin-bottom:8px}
+  .ok p{color:var(--muted)}
+  .sent .fields{display:none}
+  .sent .ok{display:block}
+  .demo{display:block;text-align:center;font-size:11.5px;color:var(--muted);letter-spacing:.06em;margin-top:10px;opacity:.8}
+
+  /* детские группы */
+  .kids{background:#ece1cf;padding:0}
+  .kids > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+  .kids::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(251,248,243,.2) 0%,rgba(251,248,243,.75) 45%,rgba(251,248,243,.94) 70%)}
+  .kids .wrap{position:relative;z-index:2;padding-top:100px;padding-bottom:100px;display:flex;justify-content:flex-end}
+  .kids-card{max-width:520px;width:100%}
+  .kids h2{font-size:clamp(34px,4.6vw,50px)}
+  .kids p.lead{margin-bottom:26px;color:var(--ink-2)}
+  .kids form{display:flex;flex-wrap:wrap;gap:12px}
+  .kids .input{flex:1 1 180px;background:rgba(255,255,255,.9)}
+  .kids .btn{flex:1 1 100%}
+  .kids .kf{display:flex;flex-wrap:wrap;gap:12px;width:100%}
+  .kids.sent .kf,.kids form.sent .kf{display:none}
+  .kids .ok{text-align:left;padding:10px 0}
+  .kids .ok .ic{margin:0 0 14px}
+
+  /* контакты */
+  .contacts{background:
+     radial-gradient(45% 55% at 100% 0%,rgba(239,220,178,.5),transparent 70%),
+     radial-gradient(40% 40% at 0% 100%,rgba(236,225,207,.9),transparent 70%),
+     var(--ivory)}
+  .ccards{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .cc{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--paper);border:1px solid var(--line);display:grid;grid-template-columns:200px 1fr}
+  .cc > img{width:100%;height:100%;object-fit:cover;min-height:100%}
+  .cc .in{padding:30px 30px 30px}
+  .cc h3{font-size:38px;font-weight:300;margin-bottom:14px}
+  .cc dl{margin:0 0 20px;display:grid;gap:10px;font-size:15px}
+  .cc dt{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0}
+  .cc dd{margin:0}
+  .cc dd a{text-decoration:none;border-bottom:1px solid var(--gold-soft)}
+  .cc .actions{display:flex;flex-wrap:wrap;gap:10px}
+  .cc .actions .btn{padding:14px 20px;font-size:14px}
+
+  footer{background:var(--night);color:rgba(243,233,218,.6);text-align:center;padding:36px 20px 40px;font-size:13px;position:relative;overflow:hidden}
+  footer::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 120% at 50% 100%,rgba(215,180,106,.15),transparent 70%)}
+  footer p{position:relative;margin:4px 0}
+  footer .draft{color:var(--gold-soft);letter-spacing:.06em}
+
+  /* модальное окно выбора студии */
+  .modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(20,14,9,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+  .modal.open{display:flex}
+  .modal .box{position:relative;width:100%;max-width:520px;background:var(--paper);border-radius:22px;padding:34px 30px 30px;box-shadow:0 40px 80px -20px rgba(0,0,0,.5);animation:pop .3s ease}
+  @keyframes pop{from{transform:translateY(14px);opacity:0}}
+  .modal h3{font-size:34px;margin-bottom:6px}
+  .modal .sub{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+  .modal .pk{font-size:13px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;min-height:1em}
+  .mchoice{display:grid;gap:12px}
+  .mchoice a{display:flex;align-items:center;gap:16px;padding:14px;border-radius:16px;border:1px solid var(--line);text-decoration:none;transition:.2s;background:var(--ivory)}
+  .mchoice a:hover{border-color:var(--gold);box-shadow:0 10px 30px -18px rgba(120,80,20,.5)}
+  .mchoice img{width:74px;height:74px;border-radius:12px;object-fit:cover;flex:none}
+  .mchoice b{display:block;font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.1}
+  .mchoice span{font-size:13px;color:var(--muted)}
+  .mchoice .arr{margin-left:auto;color:var(--gold)}
+  .mtel{display:block;text-align:center;margin-top:16px;font-size:14px;color:var(--muted)}
+  .mtel a{color:var(--ink);font-weight:500;text-decoration:none;border-bottom:1px solid var(--gold-soft)}
+  .x{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:0;background:var(--cream);cursor:pointer;font-size:22px;line-height:1;color:var(--ink)}
+
+  /* лайтбокс */
+  .lb{position:fixed;inset:0;z-index:60;background:rgba(12,9,6,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+  .lb.open{display:flex}
+  .lb img{max-width:100%;max-height:80vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lb p{color:#f3e9da;font-family:var(--serif);font-size:24px;margin:16px 0 0;text-align:center}
+  .lb .x{background:rgba(255,255,255,.12);color:#fff}
+  .lb .nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.25);color:#fff;font-size:22px;cursor:pointer}
+  .lb .prev{left:16px}.lb .next{right:16px}
+
+  /* мобильная кнопка */
+  .mcta{display:none}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in-view{opacity:1;transform:none}
+
+  @media (max-width:960px){
+    .duo,.packs,.cert-grid,.form-grid,.ccards{grid-template-columns:1fr}
+    .packs{max-width:560px;margin:0 auto}
+    .cert-grid{gap:40px}
+    .form-side{min-height:340px}
+    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+    .w3,.w2,.w4{grid-column:span 1}.wide-m{grid-column:span 2}
+    .h3{grid-row:span 2}
+    .top nav{display:none}
+  }
+  @media (max-width:720px){
+    section{padding:72px 0}
+    .wrap{padding:0 16px}
+    .hero .wrap{padding-bottom:110px}
+    .btns .btn{flex:1 1 100%}
+    .studio .in{padding:26px 22px 26px}
+    .steps{grid-template-columns:1fr;gap:40px}
+    .steps::before{display:none}
+    .form-card{padding:26px 20px}
+    .row2{grid-template-columns:1fr}
+    .cc{grid-template-columns:1fr}
+    .cc > img{height:180px}
+    .cc .in{padding:24px 22px}
+    .cc .actions .btn{flex:1 1 140px}
+    .corp::before{background:linear-gradient(180deg,rgba(22,16,11,.55),rgba(22,16,11,.9))}
+    .corp .wrap{padding-top:90px;padding-bottom:90px}
+    .kids::before{background:linear-gradient(180deg,rgba(251,248,243,.35) 0%,rgba(251,248,243,.92) 40%,rgba(251,248,243,.97) 100%)}
+    .kids .wrap{padding-top:200px;padding-bottom:80px}
+    .lb .nav{display:none}
+    .mcta{display:flex;position:fixed;z-index:40;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateY(130%);transition:transform .35s ease}
+    .mcta.show{transform:none}
+    .mcta .btn{width:100%;padding:18px;font-size:16px;box-shadow:0 16px 40px -12px rgba(60,40,10,.6)}
+    footer{padding-bottom:110px}
+    .card-visual.back{display:none}
+    .cert-visual-wrap{padding:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .hero > img,.bokeh span{animation:none}
+    .reveal{opacity:1;transform:none;transition:none}
+    #snow{display:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. ПЕРВЫЙ ЭКРАН ============ -->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Белая <i></i> Берлога</a>
+    <nav aria-label="Разделы">
+      <a href="#studios">Студии</a>
+      <a href="#packs">Пакеты</a>
+      <a href="#halls">Залы</a>
+      <a href="#cert">Сертификат</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <img src="images/hero.jpg" alt="Фотостудия «Белая»: залы в тёплом свете" fetchpriority="high">
+  <div class="bokeh" aria-hidden="true">
+    <span style="width:220px;height:220px;left:72%;top:14%;opacity:.5"></span>
+    <span style="width:120px;height:120px;left:86%;top:42%;opacity:.4;animation-delay:-4s"></span>
+    <span style="width:80px;height:80px;left:62%;top:30%;opacity:.35;animation-delay:-7s"></span>
+    <span style="width:160px;height:160px;left:8%;top:10%;opacity:.25;animation-delay:-2s"></span>
+    <span style="width:60px;height:60px;left:40%;top:18%;opacity:.3;animation-delay:-9s"></span>
+  </div>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="eyebrow">Новогодний сезон · Оренбург</div>
+    <h1>Тот самый <em>тёплый</em> кадр, ради которого ждут декабря</h1>
+    <p class="sub">Две студии в центре Оренбурга. Выберите зал и время</p>
+    <p class="hint">Выходные в декабре бронируют заранее</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="#studios">Выбрать студию</a>
+      <a class="btn btn-glass" href="#cert">Подарочный сертификат</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- ============ 2. ДВЕ СТУДИИ ============ -->
+<section class="studios" id="studios">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Две студии</div>
+      <h2>Светлая <em>или</em> уютная</h2>
+      <p class="lead">Одна команда, два пространства в центре города. «Белая» — целый этаж залов с циклорамой и лофтом. «Берлога» — три зала со своим характером, включая тёмный зал со стеной огней.</p>
+    </div>
+
+    <div class="duo">
+      <article class="studio reveal">
+        <figure>
+          <img src="images/belaya-sever-1.jpg" alt="Зал «Север — Циклорама» в студии «Белая»" loading="lazy">
+          <figcaption>Зал «Север — Циклорама»</figcaption>
+        </figure>
+        <div class="in">
+          <h3>Белая</h3>
+          <div class="tag">Большая и светлая студия · 420 м², несколько залов</div>
+          <ul class="facts">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>ул. Аксакова, 8/4 к1, 5 этаж</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Ежедневно 9:00–22:00, по записи</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+              <dl class="halls" style="flex:1">
+                <dt>«Север — Циклорама», 120 м²</dt><dd>1 800 ₽/ч</dd>
+                <dt>«Юг — Лофт», 72 м²</dt><dd>1 500 ₽/ч</dd>
+                <dt>«Закат», 45 м²</dt><dd>700–1 200 ₽/ч*</dd>
+              </dl>
+            </li>
+          </ul>
+          <p class="small">Цена при брони до 3 часов, до 7 человек. При брони от 3 часов — дешевле (например, «Юг — Лофт» 1 300 ₽/ч). *В 2ГИС и ВК указаны разные цены зала «Закат», уточняется.</p>
+          <div class="actions">
+            <a class="btn btn-dark" href="http://appevent.ru/w/16020" target="_blank" rel="noopener">Записаться</a>
+            <a class="btn btn-line" href="tel:+73532926282">Позвонить</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="studio reveal">
+        <figure>
+          <img src="images/berloga-temny-1.jpg" alt="Тёмный зал студии «Берлога» со стеной огней" loading="lazy">
+          <figcaption>Тёмный зал · стена с огнями</figcaption>
+        </figure>
+        <div class="in">
+          <h3>Берлога</h3>
+          <div class="tag">Три зала, большие окна, работает с 2014 года</div>
+          <ul class="facts">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>пер. Свободина, 4 к3, 3 этаж — во дворе, по указателям «Берлога»</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Ежедневно 9:00–22:00, по предварительной записи</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+              <dl class="halls" style="flex:1">
+                <dt>Большой зал</dt><dd>1 500 ₽/ч</dd>
+                <dt>Тёмный зал</dt><dd>1 500 ₽/ч</dd>
+                <dt>Циклорама</dt><dd>1 500 ₽/ч</dd>
+              </dl>
+            </li>
+          </ul>
+          <p class="small">Первый и второй час — 1 500 ₽, с третьего часа без перерыва — 1 300 ₽/ч. До 7 человек, включая фотографа. Чай, кофе и гримёрная — бесплатно.</p>
+          <div class="actions">
+            <a class="btn btn-dark" href="http://appevent.ru/w/2089" target="_blank" rel="noopener">Записаться</a>
+            <a class="btn btn-line" href="tel:+73532926282">Позвонить</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. ПАКЕТЫ ============ -->
+<section class="packs-sec" id="packs">
+  <div class="wrap">
+    <div class="packs-head reveal">
+      <div>
+        <div class="eyebrow">Новогодние пакеты</div>
+        <h2>Час, который <em>запомнится</em></h2>
+      </div>
+      <span class="note">Пример, состав и цена уточняются</span>
+    </div>
+
+    <div class="packs">
+      <article class="pack reveal">
+        <figure><img src="images/belaya-yug-1.jpg" alt="Зал «Юг — Лофт» в тёплом свете" loading="lazy"></figure>
+        <div class="in">
+          <span class="dur">1 час</span>
+          <h3>Семейная съёмка в новогоднем зале</h3>
+          <div class="p"><small>от</small>2 500 ₽</div>
+          <p class="ex">пример, состав и цена уточняются</p>
+          <button class="btn btn-dark btn-block" data-book="Семейная съёмка в новогоднем зале">Записаться</button>
+        </div>
+      </article>
+      <article class="pack reveal">
+        <figure><img src="images/belaya-sever-2.jpg" alt="Светлая циклорама «Север» в студии «Белая»" loading="lazy"></figure>
+        <div class="in">
+          <span class="dur">30 минут</span>
+          <h3>Мини-съёмка с&nbsp;ребёнком</h3>
+          <div class="p"><small>от</small>1 500 ₽</div>
+          <p class="ex">пример, состав и цена уточняются</p>
+          <button class="btn btn-dark btn-block" data-book="Мини-съёмка с ребёнком">Записаться</button>
+        </div>
+      </article>
+      <article class="pack reveal">
+        <figure><img src="images/berloga-temny-2.jpg" alt="Тёмный зал «Берлоги» со стеной огней и зеркалами" loading="lazy"></figure>
+        <div class="in">
+          <span class="dur">1 час</span>
+          <h3>Съёмка для&nbsp;двоих</h3>
+          <div class="p"><small>от</small>2 500 ₽</div>
+          <p class="ex">пример, состав и цена уточняются</p>
+          <button class="btn btn-dark btn-block" data-book="Съёмка для двоих">Записаться</button>
+        </div>
+      </article>
+    </div>
+    <p class="base reveal">Для ориентира: час аренды зала — от 1 500 ₽ («Юг — Лофт» в «Белой», любой зал «Берлоги»).</p>
+  </div>
+</section>
+
+<!-- ============ 4. ЗАЛЫ ============ -->
+<section class="halls-sec" id="halls">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Залы и локации</div>
+      <h2>Где будем <em>снимать</em></h2>
+      <p class="lead">От белоснежной циклорамы до тёмного зала с огнями. Нажмите на фото, чтобы рассмотреть зал ближе.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Студия">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="g-belaya" id="t-belaya">Белая</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="g-berloga" id="t-berloga">Берлога</button>
+    </div>
+
+    <div class="gallery" id="g-belaya" role="tabpanel" aria-labelledby="t-belaya">
+      <figure class="g w4 h3 wide-m"><img src="images/belaya-sever-2.jpg" alt="" loading="lazy"><figcaption><b>Север — Циклорама</b><span>120 м², белая циклорама</span></figcaption></figure>
+      <figure class="g w2 h3"><img src="images/belaya-sever-1.jpg" alt="" loading="lazy"><figcaption><b>Север — Циклорама</b><span>естественный свет из окон</span></figcaption></figure>
+      <figure class="g w3 h2"><img src="images/belaya-yug-1.jpg" alt="" loading="lazy"><figcaption><b>Юг — Лофт</b><span>72 м², тёплый свет</span></figcaption></figure>
+      <figure class="g w3 h2"><img src="images/belaya-yug-2.jpg" alt="" loading="lazy"><figcaption><b>Юг — Лофт</b><span>бетонная стена, диван</span></figcaption></figure>
+      <figure class="g w2 h2"><img src="images/belaya-zakat-1.jpg" alt="" loading="lazy"><figcaption><b>Закат</b><span>45 м², кирпичная стена</span></figcaption></figure>
+      <figure class="g w2 h2"><img src="images/belaya-zakat-2.jpg" alt="" loading="lazy"><figcaption><b>Закат</b><span>окна и тёмные шторы</span></figcaption></figure>
+      <figure class="g w2 h2"><img src="images/belaya-lounge.jpg" alt="" loading="lazy"><figcaption><b>Зона ожидания</b><span>уютно до и после съёмки</span></figcaption></figure>
+      <figure class="g w6 h2 wide-m" style="grid-column:1/-1"><img src="images/belaya-grim.jpg" alt="" loading="lazy" style="object-position:50% 40%"><figcaption><b>Гримёрная</b><span>гримёрное место — 300 ₽</span></figcaption></figure>
+    </div>
+
+    <div class="gallery" id="g-berloga" role="tabpanel" aria-labelledby="t-berloga" hidden>
+      <figure class="g w4 h3 wide-m"><img src="images/berloga-temny-1.jpg" alt="" loading="lazy"><figcaption><b>Тёмный зал</b><span>чёрный кирпич, стена с огнями, зеркала</span></figcaption></figure>
+      <figure class="g w2 h3"><img src="images/berloga-bolshoy-1.jpg" alt="" loading="lazy"><figcaption><b>Большой зал</b><span>лестница, фактурные стены</span></figcaption></figure>
+      <figure class="g w3 h2"><img src="images/berloga-temny-2.jpg" alt="" loading="lazy"><figcaption><b>Тёмный зал</b><span>окон нет — только огни</span></figcaption></figure>
+      <figure class="g w3 h2"><img src="images/berloga-cyclo-1.jpg" alt="" loading="lazy"><figcaption><b>Циклорама</b><span>широкая, 6 метров</span></figcaption></figure>
+      <figure class="g w4 h2 wide-m"><img src="images/berloga-cyclo-2.jpg" alt="" loading="lazy"><figcaption><b>Циклорама</b><span>солнце в зале с 9:00 до 12:00</span></figcaption></figure>
+      <figure class="g w2 h2 wide-m"><img src="images/berloga-bolshoy-2.jpg" alt="" loading="lazy"><figcaption><b>Большой зал</b><span>бетонная стена, большое окно</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. СЕРТИФИКАТ ============ -->
+<section class="cert-sec" id="cert">
+  <div class="wrap">
+    <div class="cert-grid">
+      <div class="cert-visual-wrap reveal">
+        <div class="card-visual">
+          <img src="images/berloga-temny-1.jpg" alt="" loading="lazy">
+          <div class="frame"></div>
+          <div class="cv">
+            <div class="t">Подарочный сертификат</div>
+            <div>
+              <div class="n" id="cvNum">5 000 ₽</div>
+              <div class="s">на фотосессию · «Белая» и «Берлога»</div>
+            </div>
+            <div class="s">Оренбург · действует до 8 марта (уточняется)</div>
+          </div>
+        </div>
+        <div class="card-visual back" aria-hidden="true"><img src="images/belaya-sever-1.jpg" alt=""><div class="frame"></div></div>
+      </div>
+
+      <div class="reveal">
+        <div class="eyebrow">Подарок</div>
+        <h2>Сертификат <em>на фотосессию</em></h2>
+        <p class="parents">Подарите родителям семейную фотосессию</p>
+
+        <p class="opt-label">Номинал</p>
+        <div class="chips" id="certNom">
+          <label class="chip"><input type="radio" name="cn" value="3 000 ₽"><span><b>3 000 ₽</b></span></label>
+          <label class="chip"><input type="radio" name="cn" value="5 000 ₽" checked><span><b>5 000 ₽</b></span></label>
+          <label class="chip"><input type="radio" name="cn" value="10 000 ₽"><span><b>10 000 ₽</b></span></label>
+        </div>
+        <div class="any">
+          <label for="anySum">На любую сумму</label>
+          <input id="anySum" inputmode="numeric" placeholder="Своя сумма" autocomplete="off">
+          <i>₽</i>
+        </div>
+
+        <p class="opt-label">Или на пакет <span style="text-transform:none;letter-spacing:0;opacity:.7">— пример, уточняется</span></p>
+        <div class="chips" id="certPack">
+          <label class="chip"><input type="radio" name="cn" value="Семейная съёмка — 2 500 ₽" data-short="2 500 ₽"><span><small>Семейная съёмка</small><b>2 500 ₽</b></span></label>
+          <label class="chip"><input type="radio" name="cn" value="Мини-съёмка с ребёнком — 1 500 ₽" data-short="1 500 ₽"><span><small>Мини-съёмка с ребёнком</small><b>1 500 ₽</b></span></label>
+          <label class="chip"><input type="radio" name="cn" value="Съёмка для двоих — 2 500 ₽" data-short="2 500 ₽"><span><small>Съёмка для двоих</small><b>2 500 ₽</b></span></label>
+        </div>
+
+        <ul class="cert-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg>Приходит в красивом электронном виде — его можно распечатать</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg>Действует в обеих студиях</li>
+        </ul>
+        <p style="margin-bottom:24px"><span class="note">Действует до 8 марта (уточняется)</span></p>
+        <a class="btn btn-gold" href="#order" id="certGo">Оформить сертификат</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. ДЛЯ КОМПАНИЙ ============ -->
+<section class="corp" id="corp">
+  <img src="images/belaya-zakat-2.jpg" alt="" loading="lazy">
+  <div class="wrap reveal">
+    <div class="eyebrow">Для компаний</div>
+    <h2>Сертификаты сотрудникам <em>от 5 штук</em></h2>
+    <p>Новогодний подарок, который не пылится на полке: каждый выберет зал и время, а кадры останутся надолго.</p>
+    <div class="from"><b>от 3 000 ₽</b><span>за сертификат</span></div>
+    <a class="btn btn-gold" href="#order" data-pick="Для компании (от 5 сертификатов)">Оставить заявку</a>
+  </div>
+</section>
+
+<!-- ============ 7. КАК ЭТО РАБОТАЕТ ============ -->
+<section class="steps-sec">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Как это работает</div>
+      <h2>Три <em>простых</em> шага</h2>
+      <p class="lead">Без звонков и переписок — если не хочется.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Выбираете студию и зал</h3><p>Светлая «Белая» или «Берлога» с тёмным залом и огнями — по настроению.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Бронируете время онлайн</h3><p>Свободные часы видны сразу. Декабрьские выходные лучше бронировать заранее.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Приходите на съёмку</h3><p>Зона ожидания, чай и кофе — пока готовитесь к кадру.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. ФОРМА СЕРТИФИКАТА ============ -->
+<section class="form-sec" id="order">
+  <div class="wrap">
+    <div class="form-grid">
+      <div class="form-side reveal">
+        <img src="images/belaya-lounge.jpg" alt="" loading="lazy">
+        <div class="in">
+          <div class="eyebrow" style="color:var(--gold-soft)">Заявка</div>
+          <h2>Оформить <em style="color:var(--gold-soft)">сертификат</em></h2>
+          <p>Оставьте контакты — администратор уточнит детали и пришлёт электронный сертификат.</p>
+        </div>
+      </div>
+
+      <form class="form-card reveal" id="certForm" novalidate>
+        <div class="fields">
+          <div class="row2">
+            <label class="field"><span>Имя</span><input class="input" name="name" autocomplete="name" required></label>
+            <label class="field"><span>Телефон</span><input class="input" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+          </div>
+          <label class="field"><span>Что оформить</span>
+            <select class="input" name="kind" id="kind">
+              <optgroup label="Номинал">
+                <option>Номинал 3 000 ₽</option>
+                <option selected>Номинал 5 000 ₽</option>
+                <option>Номинал 10 000 ₽</option>
+                <option value="any">На любую сумму</option>
+              </optgroup>
+              <optgroup label="Пакет (пример, уточняется)">
+                <option>Пакет «Семейная съёмка» — 2 500 ₽</option>
+                <option>Пакет «Мини-съёмка с ребёнком» — 1 500 ₽</option>
+                <option>Пакет «Съёмка для двоих» — 2 500 ₽</option>
+              </optgroup>
+              <optgroup label="Компаниям">
+                <option>Для компании (от 5 сертификатов)</option>
+              </optgroup>
+            </select>
+          </label>
+          <label class="field" id="anyWrap" hidden><span>Сумма, ₽</span><input class="input" name="sum" inputmode="numeric" placeholder="Например, 4 000"></label>
+          <label class="field"><span>Кому подарок <em>(необязательно)</em></span><input class="input" name="to" placeholder="Например, маме и папе"></label>
+          <button class="btn btn-gold btn-block" type="submit">Оформить</button>
+          <p class="after">Администратор свяжется и пришлёт электронный сертификат</p>
+          <span class="demo">Демо-режим: заявка никуда не отправляется</span>
+        </div>
+        <div class="ok" role="status">
+          <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg></div>
+          <h3>Заявка отправлена</h3>
+          <p>Администратор свяжется и пришлёт электронный сертификат.</p>
+          <button type="button" class="btn btn-line" data-reset>Оформить ещё один</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. ДЕТСКИЕ ГРУППЫ ============ -->
+<section class="kids" id="kids">
+  <img src="images/berloga-cyclo-2.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <div class="kids-card reveal">
+      <div class="eyebrow">Детские группы</div>
+      <h2>Набор в детские группы <em>после праздников</em></h2>
+      <p class="lead">Оставьте заявку, расскажем подробнее.</p>
+      <form id="kidsForm" novalidate>
+        <div class="fields kf">
+          <input class="input" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
+          <input class="input" name="phone" type="tel" inputmode="tel" placeholder="Телефон" autocomplete="tel" aria-label="Телефон" required>
+          <button class="btn btn-dark" type="submit">Оставить заявку</button>
+          <span class="demo" style="width:100%">Демо-режим: заявка никуда не отправляется</span>
+        </div>
+        <div class="ok" role="status">
+          <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5 9-10"/></svg></div>
+          <h3>Заявка отправлена</h3>
+          <p>Мы свяжемся и расскажем подробнее.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. КОНТАКТЫ ============ -->
+<section class="contacts" id="contacts">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Контакты</div>
+      <h2>Ждём <em>в гости</em></h2>
+    </div>
+    <div class="ccards">
+      <article class="cc reveal">
+        <img src="images/belaya-sever-1.jpg" alt="Студия «Белая»" loading="lazy">
+        <div class="in">
+          <h3>Белая</h3>
+          <dl>
+            <div><dt>Адрес</dt><dd>ул. Аксакова, 8/4 к1, 5 этаж</dd></div>
+            <div><dt>Часы</dt><dd>Ежедневно 9:00–22:00, по записи</dd></div>
+            <div><dt>Телефон</dt><dd><a href="tel:+73532926282">+7 (3532) 92-62-82</a></dd></div>
+            <div><dt>ВКонтакте</dt><dd><a href="https://vk.com/vsegdabelaya" target="_blank" rel="noopener">vk.com/vsegdabelaya</a></dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-dark" href="tel:+73532926282">Позвонить</a>
+            <a class="btn btn-line" href="http://appevent.ru/w/16020" target="_blank" rel="noopener">Онлайн-запись</a>
+          </div>
+        </div>
+      </article>
+      <article class="cc reveal">
+        <img src="images/berloga-temny-2.jpg" alt="Студия «Берлога»" loading="lazy">
+        <div class="in">
+          <h3>Берлога</h3>
+          <dl>
+            <div><dt>Адрес</dt><dd>пер. Свободина, 4 к3, 3 этаж (во дворе)</dd></div>
+            <div><dt>Часы</dt><dd>Ежедневно 9:00–22:00, по предварительной записи</dd></div>
+            <div><dt>Телефон</dt><dd><a href="tel:+73532926282">+7 (3532) 92-62-82</a>, <a href="tel:+73532423737">+7 (3532) 42-37-37</a></dd></div>
+            <div><dt>ВКонтакте и Telegram</dt><dd><a href="https://vk.com/berlogastudia" target="_blank" rel="noopener">vk.com/berlogastudia</a> · <a href="https://t.me/berlogastudia" target="_blank" rel="noopener">t.me/berlogastudia</a></dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-dark" href="tel:+73532926282">Позвонить</a>
+            <a class="btn btn-line" href="http://appevent.ru/w/2089" target="_blank" rel="noopener">Онлайн-запись</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="draft">Черновик. Цены и условия уточняются.</p>
+  <p>Фото залов — из карточек студий в 2ГИС и сообществ ВКонтакте.</p>
+</footer>
+
+<!-- мобильная кнопка -->
+<div class="mcta" id="mcta"><button class="btn btn-gold" data-book="">Записаться</button></div>
+
+<!-- выбор студии -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="box">
+    <button class="x" type="button" aria-label="Закрыть" data-close>×</button>
+    <div class="pk" id="mPack"></div>
+    <h3 id="mTitle">Где будем снимать?</h3>
+    <p class="sub">Откроется онлайн-запись выбранной студии: свободные залы и время.</p>
+    <div class="mchoice">
+      <a href="http://appevent.ru/w/16020" target="_blank" rel="noopener"><img src="images/belaya-sever-1.jpg" alt=""><div><b>Белая</b><span>ул. Аксакова, 8/4 к1 · от 700 ₽/ч</span></div><span class="arr">→</span></a>
+      <a href="http://appevent.ru/w/2089" target="_blank" rel="noopener"><img src="images/berloga-temny-1.jpg" alt=""><div><b>Берлога</b><span>пер. Свободина, 4 к3 · 1 500 ₽/ч</span></div><span class="arr">→</span></a>
+    </div>
+    <p class="mtel">Или позвоните: <a href="tel:+73532926282">+7 (3532) 92-62-82</a></p>
+  </div>
+</div>
+
+<!-- лайтбокс -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="x" type="button" aria-label="Закрыть" data-close>×</button>
+  <button class="nav prev" type="button" aria-label="Предыдущее">‹</button>
+  <img alt="">
+  <p></p>
+  <button class="nav next" type="button" aria-label="Следующее">›</button>
+</div>
+
+<script>
+(function(){
+  /* --- падающие огоньки на первом экране --- */
+  var cv=document.getElementById('snow');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(cv && !reduce){
+    var ctx=cv.getContext('2d'),W,H,dpr,parts=[],running=true;
+    function size(){dpr=Math.min(window.devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+    function make(init){var r=Math.random()*1.6+.6;return{x:Math.random()*W,y:init?Math.random()*H:-10,r:r,vy:r*.22+.12,sw:Math.random()*Math.PI*2,ss:Math.random()*.01+.004,a:Math.random()*.45+.2,tw:Math.random()*Math.PI*2}}
+    size();var N=Math.round(Math.min(70,W/18));for(var i=0;i<N;i++)parts.push(make(true));
+    window.addEventListener('resize',size);
+    function tick(){
+      if(!running)return;
+      ctx.clearRect(0,0,W,H);
+      for(var i=0;i<parts.length;i++){var p=parts[i];p.y+=p.vy;p.sw+=p.ss;p.tw+=.03;var x=p.x+Math.sin(p.sw)*14;
+        var al=p.a*(.75+.25*Math.sin(p.tw));
+        // текст слева внизу — огоньки там приглушаем
+        if(x<W*.6 && p.y>H*.42) al*=.35;
+        var g=ctx.createRadialGradient(x,p.y,0,x,p.y,p.r*5);
+        g.addColorStop(0,'rgba(255,226,170,'+al+')');g.addColorStop(.35,'rgba(255,206,130,'+al*.45+')');g.addColorStop(1,'rgba(255,206,130,0)');
+        ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,p.y,p.r*5,0,Math.PI*2);ctx.fill();
+        if(p.y>H+12)parts[i]=make(false);}
+      requestAnimationFrame(tick);
+    }
+    var io0=new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!running){running=true;tick();}running=v;});
+    io0.observe(cv);tick();
+  }
+
+  /* --- появление блоков --- */
+  var rv=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in-view')});
+
+  /* --- мобильная кнопка: показываем после первого экрана --- */
+  var mcta=document.getElementById('mcta'),hero=document.getElementById('top');
+  function mc(){mcta.classList.toggle('show',window.scrollY>hero.offsetHeight*.6);}
+  window.addEventListener('scroll',mc,{passive:true});mc();
+
+  /* --- модалка выбора студии --- */
+  var modal=document.getElementById('modal'),mPack=document.getElementById('mPack'),lastFocus;
+  function openM(pk){lastFocus=document.activeElement;mPack.textContent=pk||'';modal.classList.add('open');modal.querySelector('.mchoice a').focus();}
+  function closeM(){modal.classList.remove('open');lastFocus&&lastFocus.focus();}
+  document.querySelectorAll('[data-book]').forEach(function(b){b.addEventListener('click',function(){openM(b.getAttribute('data-book'))})});
+  modal.addEventListener('click',function(e){if(e.target===modal||e.target.hasAttribute('data-close'))closeM();});
+
+  /* --- вкладки галереи --- */
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});});});
+
+  /* --- лайтбокс --- */
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('p'),cur=[],ci=0;
+  function show(){var f=cur[ci];lbImg.src=f.querySelector('img').src;lbCap.textContent=f.querySelector('b').textContent;}
+  document.querySelectorAll('.gallery').forEach(function(g){var items=[].slice.call(g.querySelectorAll('.g'));
+    items.forEach(function(f,i){f.tabIndex=0;f.setAttribute('role','button');var lbl=f.querySelector('b').textContent;f.setAttribute('aria-label','Открыть фото: '+lbl);f.querySelector('img').alt=lbl;
+      function op(){cur=items;ci=i;show();lb.classList.add('open');}
+      f.addEventListener('click',op);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();op();}});});});
+  lb.querySelector('.prev').onclick=function(){ci=(ci-1+cur.length)%cur.length;show();};
+  lb.querySelector('.next').onclick=function(){ci=(ci+1)%cur.length;show();};
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.hasAttribute('data-close'))lb.classList.remove('open');});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closeM();lb.classList.remove('open');}
+    if(lb.classList.contains('open')){if(e.key==='ArrowLeft')lb.querySelector('.prev').click();if(e.key==='ArrowRight')lb.querySelector('.next').click();}
+  });
+
+  /* --- сертификат: выбор номинала --- */
+  var cvNum=document.getElementById('cvNum'),anySum=document.getElementById('anySum'),kind=document.getElementById('kind'),anyWrap=document.getElementById('anyWrap');
+  function fmt(n){return String(n).replace(/\D/g,'').replace(/^0+/,'').replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  document.querySelectorAll('input[name="cn"]').forEach(function(r){r.addEventListener('change',function(){anySum.value='';cvNum.textContent=r.getAttribute('data-short')||r.value;});});
+  anySum.addEventListener('input',function(){var v=fmt(anySum.value);anySum.value=v;if(v){document.querySelectorAll('input[name="cn"]').forEach(function(r){r.checked=false});cvNum.textContent=v+' ₽';}});
+  function setKind(val,sum){for(var i=0;i<kind.options.length;i++){if(kind.options[i].value===val||kind.options[i].text===val){kind.selectedIndex=i;break;}}syncAny();if(sum)certForm.sum.value=sum;}
+  function syncAny(){anyWrap.hidden=kind.value!=='any';}
+  kind.addEventListener('change',syncAny);
+  document.getElementById('certGo').addEventListener('click',function(){
+    var s=anySum.value.trim();var r=document.querySelector('input[name="cn"]:checked');
+    if(s){setKind('any',s);}else if(r){var v=r.value;
+      if(/^\d/.test(v))setKind('Номинал '+v);
+      else{var map={'Семейная':'Пакет «Семейная съёмка» — 2 500 ₽','Мини':'Пакет «Мини-съёмка с ребёнком» — 1 500 ₽','Съёмка для двоих':'Пакет «Съёмка для двоих» — 2 500 ₽'};for(var k in map){if(v.indexOf(k)===0)setKind(map[k]);}}
+    }
+  });
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){setKind(a.getAttribute('data-pick'));});});
+
+  /* --- формы (демо) --- */
+  function phoneMask(inp){inp.addEventListener('input',function(){var d=inp.value.replace(/\D/g,'');if(!d){inp.value='';return;}if(d[0]==='8')d='7'+d.slice(1);if(d[0]!=='7')d='7'+d;d=d.slice(0,11);
+    var o='+7';if(d.length>1)o+=' ('+d.slice(1,4);if(d.length>=4)o+=')';if(d.length>4)o+=' '+d.slice(4,7);if(d.length>7)o+='-'+d.slice(7,9);if(d.length>9)o+='-'+d.slice(9,11);inp.value=o;});}
+  document.querySelectorAll('input[type="tel"]').forEach(phoneMask);
+  var certForm=document.getElementById('certForm');
+  function demo(form){form.addEventListener('submit',function(e){e.preventDefault();var ok=true;
+    [form.elements.name,form.elements.phone].forEach(function(f){var bad=f===form.elements.phone?f.value.replace(/\D/g,'').length<11:!f.value.trim();f.classList.toggle('err',bad);if(bad&&ok){f.focus();ok=false;}});
+    if(form.sum&&!anyWrap.hidden){var b=!form.sum.value.trim();form.sum.classList.toggle('err',b);if(b&&ok){form.sum.focus();ok=false;}}
+    if(!ok)return;form.classList.add('sent');var st=form.querySelector('.ok');st&&st.scrollIntoView({block:'center',behavior:'smooth'});});
+    form.querySelectorAll('.input').forEach(function(i){i.addEventListener('input',function(){i.classList.remove('err')})});}
+  demo(certForm);demo(document.getElementById('kidsForm'));
+  certForm.sum.addEventListener('input',function(){certForm.sum.value=fmt(certForm.sum.value);});
+  certForm.querySelector('[data-reset]').addEventListener('click',function(){certForm.reset();syncAny();certForm.classList.remove('sent');});
+})();
+</script>
+</body>
+</html>
