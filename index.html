@@ -66,7 +66,7 @@
   .btn svg{flex:none}
 
   /* шапка */
-  .top{position:absolute;inset:0 0 auto 0;z-index:6;padding:22px 0}
+  .top{position:absolute;inset:0 0 auto 0;z-index:6;padding:52px 0 22px}
   .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
   .brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none;font-family:var(--serif);font-size:22px;letter-spacing:.14em;text-transform:uppercase}
   .brand i{font-style:normal;width:1px;height:22px;background:rgba(239,220,178,.7)}
@@ -82,8 +82,57 @@
      radial-gradient(60% 50% at 78% 30%,rgba(255,196,110,.28),transparent 70%),
      linear-gradient(180deg,rgba(20,15,10,.55) 0%,rgba(20,15,10,.12) 35%,rgba(20,15,10,.35) 60%,rgba(18,13,9,.9) 100%)}
   .bokeh{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
-  .bokeh span{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,214,140,.55),rgba(255,214,140,0) 70%);filter:blur(2px);animation:float 14s ease-in-out infinite alternate}
-  @keyframes float{to{transform:translate3d(0,-26px,0) scale(1.08);opacity:.7}}
+  .bokeh span{position:absolute;border-radius:50%;background:radial-gradient(circle,var(--c,rgba(255,214,140,.5)) 0,rgba(0,0,0,0) 68%);opacity:.35;will-change:opacity,transform;
+    animation:twinkle var(--t,8s) ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+  @keyframes twinkle{0%{opacity:.25;transform:scale(.94)}55%{opacity:.85}100%{opacity:1;transform:scale(1.05)}}
+  .cert-sec .bokeh{z-index:0}
+  .cert-sec .wrap{position:relative;z-index:1}
+
+  /* гирлянда */
+  .garland{position:absolute;left:0;right:0;top:0;height:52px;z-index:5;pointer-events:none;overflow:hidden}
+  .garland svg{position:absolute;left:0;top:0;height:52px}
+  .garland path{fill:none;stroke:var(--wire,#2b241d);stroke-width:1.4;stroke-linecap:round}
+  .garland.on-dark{--wire:rgba(20,16,12,.9)}
+  .garland.on-dark path{filter:drop-shadow(0 1px 0 rgba(255,236,200,.18))}
+  .garland .b{position:absolute;width:8px;height:13px;margin-left:-4px;border-radius:50% 50% 50% 50%/42% 42% 58% 58%;background:radial-gradient(circle at 40% 35%,#fff 0,var(--c) 45%,var(--c2) 100%);
+    transform:rotate(var(--r,0deg));transform-origin:50% -3px;opacity:.55;animation:blink 3.2s ease-in-out infinite;animation-delay:var(--d,0s);will-change:opacity}
+  .garland .b::before{content:"";position:absolute;left:1px;right:1px;top:-4px;height:5px;border-radius:2px 2px 1px 1px;background:#3a332b}
+  .garland .b::after{content:"";position:absolute;left:50%;top:55%;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;background:radial-gradient(circle,var(--g) 0,rgba(0,0,0,0) 70%)}
+  @keyframes blink{0%,100%{opacity:.45}45%,60%{opacity:1}}
+  .garland .y{--c:#ffd27a;--c2:#e3a33b;--g:rgba(255,206,110,.55)}
+  .garland .r{--c:#ff6b5e;--c2:#c8322a;--g:rgba(255,92,78,.45)}
+  .garland .gr{--c:#6fdc98;--c2:#2f9a5a;--g:rgba(96,214,140,.4)}
+  .garland .bl{--c:#7fb4ff;--c2:#3a6fd1;--g:rgba(110,165,255,.45)}
+  .hero .garland{z-index:5}
+
+  /* круглая кнопка записи */
+  .fab{position:fixed;z-index:45;right:calc(18px + env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom));transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .25s}
+  .fab.away{opacity:0;pointer-events:none;transform:scale(.8)}
+  .fab-btn{position:relative;width:86px;height:86px;border-radius:50%;border:0;cursor:pointer;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    color:#fff;font:600 11px/1.1 var(--sans);letter-spacing:.03em;
+    background:radial-gradient(circle at 34% 28%,#e3c27a 0,#c39a52 42%,#9b7232 100%);
+    box-shadow:inset 0 0 0 1px rgba(255,240,210,.55),0 0 0 3px rgba(255,251,244,.92),0 0 0 4.5px rgba(184,145,79,.5),0 14px 34px -10px rgba(80,50,10,.7);transition:transform .2s}
+  .fab-btn:hover{transform:scale(1.05)}
+  .fab-btn:active{transform:scale(.97)}
+  .fab-btn:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+  .fab-btn::before{content:"";position:absolute;inset:-4px;border-radius:50%;box-shadow:0 0 22px 6px rgba(255,200,110,.55);opacity:.35;animation:pulse 2.8s ease-in-out infinite;pointer-events:none;will-change:opacity,transform}
+  @keyframes pulse{0%,100%{opacity:.25;transform:scale(.96)}50%{opacity:.9;transform:scale(1.06)}}
+  .fab-btn .dot{position:absolute;top:6px;right:9px;width:8px;height:8px;border-radius:50%;background:#ff6b5e;box-shadow:0 0 8px 2px rgba(255,92,78,.7);animation:blink 2.4s ease-in-out infinite}
+  .fab-btn svg{width:22px;height:22px}
+  .fab-menu{position:absolute;right:0;bottom:calc(100% + 14px);width:272px;background:var(--paper);border-radius:18px;padding:16px;box-shadow:0 30px 70px -20px rgba(40,25,8,.55),0 0 0 1px var(--line);transform-origin:100% 100%;animation:pop .22s ease}
+  .fab-menu[hidden]{display:none}
+  .fab-menu > p{margin:0 4px 10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .fab-menu a.st{display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;text-decoration:none;transition:background .2s}
+  .fab-menu a.st:hover,.fab-menu a.st:focus-visible{background:var(--cream);outline:none}
+  .fab-menu a.st img{width:46px;height:46px;border-radius:10px;object-fit:cover;flex:none}
+  .fab-menu a.st b{display:block;font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.05}
+  .fab-menu a.st span{font-size:12.5px;color:var(--muted)}
+  .fab-menu a.st i{margin-left:auto;font-style:normal;color:var(--gold)}
+  .fab-menu .tels{border-top:1px solid var(--line);margin-top:8px;padding:10px 4px 0;font-size:13px;color:var(--muted)}
+  .fab-menu .tels a{color:var(--ink);font-weight:500;text-decoration:none;border-bottom:1px solid var(--gold-soft)}
+
+  /* гирлянда-разделитель в начале блока */
+  .with-garland{padding-top:128px}
   #snow{position:absolute;inset:0;z-index:3;pointer-events:none;width:100%;height:100%}
   .hero .wrap{position:relative;z-index:4;padding-top:140px;padding-bottom:84px;width:100%}
   .hero .eyebrow{color:var(--gold-soft)}
@@ -325,8 +374,6 @@
   .lb .nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.25);color:#fff;font-size:22px;cursor:pointer}
   .lb .prev{left:16px}.lb .next{right:16px}
 
-  /* мобильная кнопка */
-  .mcta{display:none}
 
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in-view{opacity:1;transform:none}
@@ -360,15 +407,26 @@
     .kids::before{background:linear-gradient(180deg,rgba(251,248,243,.35) 0%,rgba(251,248,243,.92) 40%,rgba(251,248,243,.97) 100%)}
     .kids .wrap{padding-top:200px;padding-bottom:80px}
     .lb .nav{display:none}
-    .mcta{display:flex;position:fixed;z-index:40;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateY(130%);transition:transform .35s ease}
-    .mcta.show{transform:none}
-    .mcta .btn{width:100%;padding:18px;font-size:16px;box-shadow:0 16px 40px -12px rgba(60,40,10,.6)}
-    footer{padding-bottom:110px}
+    footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+    .top{padding-top:48px}
+    .with-garland{padding-top:104px}
+    .fab{right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-inset-bottom))}
+    .fab-btn{width:72px;height:72px;font-size:10px;gap:3px}
+    .fab-btn svg{width:19px;height:19px}
+    .fab-menu{width:min(272px,calc(100vw - 28px))}
+    /* на телефоне легче: меньше боке, без масштабирования */
+    .bokeh span:nth-child(n+6){display:none}
+    @keyframes twinkle{0%{opacity:.3}100%{opacity:1}}
+    .fab-btn::before{animation-duration:3.4s}
     .card-visual.back{display:none}
     .cert-visual-wrap{padding:0}
   }
   @media (prefers-reduced-motion:reduce){
     .hero > img,.bokeh span{animation:none}
+    .bokeh span{opacity:.75}
+    .garland .b,.fab-btn .dot{animation:none;opacity:1}
+    .fab-btn::before{animation:none;opacity:.55}
+    .fab-menu{animation:none}
     .reveal{opacity:1;transform:none;transition:none}
     #snow{display:none}
     html{scroll-behavior:auto}
@@ -393,12 +451,17 @@
 
 <section class="hero" id="top">
   <img src="images/hero.jpg" alt="Фотостудия «Белая»: залы в тёплом свете" fetchpriority="high">
+  <div class="garland on-dark" aria-hidden="true"></div>
   <div class="bokeh" aria-hidden="true">
-    <span style="width:220px;height:220px;left:72%;top:14%;opacity:.5"></span>
-    <span style="width:120px;height:120px;left:86%;top:42%;opacity:.4;animation-delay:-4s"></span>
-    <span style="width:80px;height:80px;left:62%;top:30%;opacity:.35;animation-delay:-7s"></span>
-    <span style="width:160px;height:160px;left:8%;top:10%;opacity:.25;animation-delay:-2s"></span>
-    <span style="width:60px;height:60px;left:40%;top:18%;opacity:.3;animation-delay:-9s"></span>
+    <span style="--c:rgba(255,207,110,.55);width:230px;height:230px;left:70%;top:12%;--t:9s"></span>
+    <span style="--c:rgba(255,92,78,.32);width:120px;height:120px;left:86%;top:38%;--t:7s;--d:-3s"></span>
+    <span style="--c:rgba(110,165,255,.3);width:90px;height:90px;left:60%;top:26%;--t:8s;--d:-5s"></span>
+    <span style="--c:rgba(96,214,140,.26);width:110px;height:110px;left:79%;top:60%;--t:10s;--d:-2s"></span>
+    <span style="--c:rgba(255,207,110,.35);width:150px;height:150px;left:6%;top:9%;--t:11s;--d:-6s"></span>
+    <span style="--c:rgba(255,92,78,.24);width:70px;height:70px;left:42%;top:16%;--t:6s;--d:-1s"></span>
+    <span style="--c:rgba(110,165,255,.24);width:60px;height:60px;left:92%;top:18%;--t:7.5s;--d:-4s"></span>
+    <span style="--c:rgba(96,214,140,.22);width:80px;height:80px;left:28%;top:8%;--t:9.5s;--d:-7s"></span>
+    <span style="--c:rgba(255,207,110,.3);width:54px;height:54px;left:66%;top:52%;--t:6.5s;--d:-2.5s"></span>
   </div>
   <canvas id="snow" aria-hidden="true"></canvas>
   <div class="wrap">
@@ -564,7 +627,17 @@
 </section>
 
 <!-- ============ 5. СЕРТИФИКАТ ============ -->
-<section class="cert-sec" id="cert">
+<section class="cert-sec with-garland" id="cert">
+  <div class="garland on-dark" aria-hidden="true"></div>
+  <div class="bokeh" aria-hidden="true">
+    <span style="--c:rgba(255,207,110,.35);width:260px;height:260px;left:62%;top:6%;--t:10s"></span>
+    <span style="--c:rgba(255,92,78,.22);width:140px;height:140px;left:88%;top:44%;--t:8s;--d:-3s"></span>
+    <span style="--c:rgba(96,214,140,.18);width:160px;height:160px;left:-4%;top:70%;--t:11s;--d:-5s"></span>
+    <span style="--c:rgba(110,165,255,.2);width:110px;height:110px;left:40%;top:82%;--t:9s;--d:-2s"></span>
+    <span style="--c:rgba(255,207,110,.25);width:90px;height:90px;left:8%;top:12%;--t:7s;--d:-6s"></span>
+    <span style="--c:rgba(255,92,78,.18);width:70px;height:70px;left:50%;top:30%;--t:6.5s;--d:-1s"></span>
+    <span style="--c:rgba(110,165,255,.16);width:120px;height:120px;left:76%;top:84%;--t:9.5s;--d:-4s"></span>
+  </div>
   <div class="wrap">
     <div class="cert-grid">
       <div class="cert-visual-wrap reveal">
@@ -726,7 +799,8 @@
 </section>
 
 <!-- ============ 10. КОНТАКТЫ ============ -->
-<section class="contacts" id="contacts">
+<section class="contacts with-garland" id="contacts">
+  <div class="garland" aria-hidden="true"></div>
   <div class="wrap">
     <div class="center reveal">
       <div class="eyebrow">Контакты</div>
@@ -774,8 +848,20 @@
   <p>Фото залов — из карточек студий в 2ГИС и сообществ ВКонтакте.</p>
 </footer>
 
-<!-- мобильная кнопка -->
-<div class="mcta" id="mcta"><button class="btn btn-gold" data-book="">Записаться</button></div>
+<!-- круглая кнопка онлайн-записи -->
+<div class="fab" id="fab">
+  <div class="fab-menu" id="fabMenu" hidden>
+    <p>Онлайн-запись</p>
+    <a class="st" href="http://appevent.ru/w/16020" target="_blank" rel="noopener"><img src="images/belaya-sever-1.jpg" alt=""><div><b>Белая</b><span>ул. Аксакова, 8/4 к1</span></div><i>→</i></a>
+    <a class="st" href="http://appevent.ru/w/2089" target="_blank" rel="noopener"><img src="images/berloga-temny-1.jpg" alt=""><div><b>Берлога</b><span>пер. Свободина, 4 к3</span></div><i>→</i></a>
+    <div class="tels">Или позвоните: <a href="tel:+73532926282">+7 (3532) 92-62-82</a></div>
+  </div>
+  <button class="fab-btn" type="button" aria-expanded="false" aria-controls="fabMenu" aria-label="Записаться онлайн: выбрать студию">
+    <span class="dot" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M9.5 14.5l1.8 1.8 3.4-3.6"/></svg>
+    <span>Записаться</span>
+  </button>
+</div>
 
 <!-- выбор студии -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
@@ -808,7 +894,7 @@
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(cv && !reduce){
     var ctx=cv.getContext('2d'),W,H,dpr,parts=[],running=true;
-    function size(){dpr=Math.min(window.devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+    function size(){W=cv.clientWidth;H=cv.clientHeight;dpr=Math.min(window.devicePixelRatio||1,W<720?1.5:2);cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
     function make(init){var r=Math.random()*1.6+.6;return{x:Math.random()*W,y:init?Math.random()*H:-10,r:r,vy:r*.22+.12,sw:Math.random()*Math.PI*2,ss:Math.random()*.01+.004,a:Math.random()*.45+.2,tw:Math.random()*Math.PI*2}}
     size();var N=Math.round(Math.min(70,W/18));for(var i=0;i<N;i++)parts.push(make(true));
     window.addEventListener('resize',size);
@@ -837,9 +923,42 @@
   } else rv.forEach(function(el){el.classList.add('in-view')});
 
   /* --- мобильная кнопка: показываем после первого экрана --- */
-  var mcta=document.getElementById('mcta'),hero=document.getElementById('top');
-  function mc(){mcta.classList.toggle('show',window.scrollY>hero.offsetHeight*.6);}
-  window.addEventListener('scroll',mc,{passive:true});mc();
+  /* --- гирлянды --- */
+  var COLORS=['y','r','gr','bl'];
+  function buildGarland(g){
+    var w=g.clientWidth;if(!w)return;g.dataset.w=w;
+    var mob=w<720,tile=mob?112:124,per=mob?2:3,n=Math.ceil(w/tile)+1,d='',html='',idx=0,sag=mob?24:28;
+    for(var i=0;i<n;i++){var x0=i*tile;d+='M'+x0+',4 Q'+(x0+tile/2)+','+(4+2*sag)+' '+(x0+tile)+',4 ';
+      for(var k=1;k<=per;k++){var t=k/(per+1),x=x0+t*tile,y=4+4*sag*t*(1-t),slope=4*sag*(1-2*t)/tile;
+        if(x>w+10)continue;
+        html+='<i class="b '+COLORS[idx%4]+'" style="left:'+x.toFixed(1)+'px;top:'+(y+1).toFixed(1)+'px;--r:'+(Math.atan(slope)*57.3*-.6).toFixed(1)+'deg;--d:'+((idx%8)*.4).toFixed(1)+'s"></i>';idx++;}}
+    g.innerHTML='<svg width="'+w+'" height="52" viewBox="0 0 '+w+' 52"><path d="'+d+'"/></svg>'+html;
+  }
+  var garlands=document.querySelectorAll('.garland');garlands.forEach(buildGarland);
+  var gt;window.addEventListener('resize',function(){clearTimeout(gt);gt=setTimeout(function(){garlands.forEach(function(g){if(+g.dataset.w!==g.clientWidth)buildGarland(g);});},150);});
+
+  /* --- круглая кнопка записи --- */
+  var fab=document.getElementById('fab'),fabBtn=fab.querySelector('.fab-btn'),fabMenu=document.getElementById('fabMenu');
+  function setMenu(open){fabMenu.hidden=!open;fabBtn.setAttribute('aria-expanded',open);if(open)fabMenu.querySelector('a').focus();}
+  fabBtn.addEventListener('click',function(e){e.stopPropagation();setMenu(fabMenu.hidden);});
+  fabMenu.addEventListener('click',function(e){e.stopPropagation();if(e.target.closest('a'))setTimeout(function(){setMenu(false)},50);});
+  document.addEventListener('click',function(){if(!fabMenu.hidden)setMenu(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!fabMenu.hidden){setMenu(false);fabBtn.focus();}});
+  /* не перекрываем кнопки, ссылки и поля: если под кнопкой что-то кликабельное — приподнимаем её */
+  var shift=0,ticking=false,SEL='a,button,input,select,textarea,label';
+  function hits(dy){var r=fabBtn.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2-shift+dy,rad=r.width/2*.82;
+    var pts=[[cx,cy],[cx-rad,cy],[cx+rad*.7,cy-rad*.7],[cx,cy-rad],[cx,cy+rad],[cx-rad*.7,cy+rad*.7],[cx-rad*.7,cy-rad*.7]];
+    for(var i=0;i<pts.length;i++){var els=document.elementsFromPoint(pts[i][0],pts[i][1]);
+      for(var j=0;j<els.length;j++){var el=els[j];if(fab.contains(el))continue;if(el.closest(SEL))return true;}}
+    return false;}
+  function place(){ticking=false;if(!fabMenu.hidden)return;var h=fabBtn.offsetHeight+14,opts=[0,-h,-2*h],best=0;
+    for(var i=0;i<opts.length;i++){if(!hits(opts[i])){best=opts[i];break;}}
+    if(best!==shift){shift=best;fab.style.transform=shift?'translateY('+shift+'px)':'';}}
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(place);}}
+  window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',req);setTimeout(place,300);
+  /* на время ввода в поля (клавиатура на телефоне) — прячем */
+  document.addEventListener('focusin',function(e){if(e.target.matches('input,select,textarea'))fab.classList.add('away');});
+  document.addEventListener('focusout',function(e){if(e.target.matches('input,select,textarea'))fab.classList.remove('away');});
 
   /* --- модалка выбора студии --- */
   var modal=document.getElementById('modal'),mPack=document.getElementById('mPack'),lastFocus;
