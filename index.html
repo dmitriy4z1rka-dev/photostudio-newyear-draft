@@ -955,7 +955,7 @@
   function place(){ticking=false;if(!fabMenu.hidden)return;var h=fabBtn.offsetHeight+14,best=0,bestN=1e9;
     for(var i=0;i<6;i++){var n=hits(-i*h);if(n<bestN){bestN=n;best=-i*h;}if(n===0)break;}
     if(best!==shift){shift=best;fab.style.transform=shift?'translateY('+shift+'px)':'';}}
-  function req(){if(!ticking){ticking=true;requestAnimationFrame(place);}}
+  function req(){if(!ticking){ticking=true;setTimeout(place,70);}}
   window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',req);setTimeout(place,300);
   /* на время ввода в поля (клавиатура на телефоне) — прячем */
   document.addEventListener('focusin',function(e){if(e.target.matches('input,select,textarea'))fab.classList.add('away');});
