@@ -951,7 +951,7 @@
     for(var i=0;i<pts.length;i++){var els=document.elementsFromPoint(pts[i][0],pts[i][1]);
       for(var j=0;j<els.length;j++){var el=els[j];if(fab.contains(el))continue;if(el.closest(SEL))return true;}}
     return false;}
-  function place(){ticking=false;if(!fabMenu.hidden)return;var h=fabBtn.offsetHeight+14,opts=[0,-h,-2*h],best=0;
+  function place(){ticking=false;if(!fabMenu.hidden)return;var h=fabBtn.offsetHeight+14,opts=[0,-h,-2*h,-3*h,-4*h],best=0;
     for(var i=0;i<opts.length;i++){if(!hits(opts[i])){best=opts[i];break;}}
     if(best!==shift){shift=best;fab.style.transform=shift?'translateY('+shift+'px)':'';}}
   function req(){if(!ticking){ticking=true;requestAnimationFrame(place);}}
