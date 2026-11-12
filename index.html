@@ -174,6 +174,7 @@
   .cert-sec h2 em{color:var(--gold-soft)}
   .cert-sec .lead{color:rgba(243,233,218,.72)}
   .cert-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+  .cert-grid > *,.form-grid > *,.duo > *,.packs > *,.ccards > *{min-width:0}
   .card-visual{position:relative;aspect-ratio:1.6/1;border-radius:18px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);transform:rotate(-2.5deg)}
   .card-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
   .card-visual::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(18,13,9,.78),rgba(18,13,9,.35) 60%,rgba(18,13,9,.6))}
@@ -195,7 +196,7 @@
   .chip input:focus-visible + span{outline:2px solid var(--gold-2);outline-offset:2px}
   .any{display:flex;align-items:center;gap:10px;border:1px solid rgba(239,220,178,.3);border-radius:14px;padding:6px 8px 6px 18px;margin-bottom:22px;background:rgba(255,255,255,.03)}
   .any label{font-size:14px;color:rgba(243,233,218,.8);white-space:nowrap}
-  .any input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font:400 24px var(--serif);padding:8px 4px;text-align:right}
+  .any input{flex:1;min-width:0;width:100%;background:transparent;border:0;outline:0;color:#fff;font:400 24px var(--serif);padding:8px 4px;text-align:right}
   .any input::placeholder{color:rgba(243,233,218,.35)}
   .any i{font-style:normal;font-family:var(--serif);font-size:22px;color:var(--gold-soft);padding-right:8px}
   .cert-list{list-style:none;padding:0;margin:0 0 28px;font-size:14.5px;color:rgba(243,233,218,.86)}
